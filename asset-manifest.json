@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/conifr_demo/static/css/main.5363f9bf.css",
+    "main.js": "/conifr_demo/static/js/main.d37e506a.js",
+    "static/js/787.84411671.chunk.js": "/conifr_demo/static/js/787.84411671.chunk.js",
+    "static/media/icons.svg": "/conifr_demo/static/media/icons.18df003f90a7f1313b98.svg",
+    "static/media/brand-icons.svg": "/conifr_demo/static/media/brand-icons.3c45c98f6f6c1b009c08.svg",
+    "static/media/icons.eot": "/conifr_demo/static/media/icons.7eefe04dc985dd4ad38b.eot",
+    "static/media/icons.ttf": "/conifr_demo/static/media/icons.32267f3b4db33a7c85ee.ttf",
+    "static/media/outline-icons.svg": "/conifr_demo/static/media/outline-icons.ab47faeab8ddc5f809ec.svg",
+    "static/media/brand-icons.eot": "/conifr_demo/static/media/brand-icons.607a77859353c0cc1882.eot",
+    "static/media/brand-icons.ttf": "/conifr_demo/static/media/brand-icons.5818bbd07dfd7095920a.ttf",
+    "static/media/icons.woff": "/conifr_demo/static/media/icons.a940d584750708f5435c.woff",
+    "static/media/brand-icons.woff": "/conifr_demo/static/media/brand-icons.ee26f57bc9e3619b022b.woff",
+    "static/media/icons.woff2": "/conifr_demo/static/media/icons.9451d5fee89b51a20f8a.woff2",
+    "static/media/brand-icons.woff2": "/conifr_demo/static/media/brand-icons.31015e861aeb30ff8355.woff2",
+    "static/media/outline-icons.eot": "/conifr_demo/static/media/outline-icons.0747be4cba2f8600544f.eot",
+    "static/media/outline-icons.ttf": "/conifr_demo/static/media/outline-icons.c3146b3524e97475c094.ttf",
+    "static/media/flags.png": "/conifr_demo/static/media/flags.99f63ae7a743f21ab308.png",
+    "static/media/outline-icons.woff": "/conifr_demo/static/media/outline-icons.8b892b7904a39e37c53d.woff",
+    "static/media/outline-icons.woff2": "/conifr_demo/static/media/outline-icons.c52405129ae48097815d.woff2",
+    "index.html": "/conifr_demo/index.html",
+    "main.5363f9bf.css.map": "/conifr_demo/static/css/main.5363f9bf.css.map",
+    "main.d37e506a.js.map": "/conifr_demo/static/js/main.d37e506a.js.map",
+    "787.84411671.chunk.js.map": "/conifr_demo/static/js/787.84411671.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5363f9bf.css",
+    "static/js/main.d37e506a.js"
+  ]
+}

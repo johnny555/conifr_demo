@@ -12,6 +12,10 @@ import ReactFlow, {
   useEdgesState
 } from 'react-flow-renderer';
 
+
+import { Grid } from 'semantic-ui-react';
+
+
 import Sidebar from './Sidebar.js';
 
 import './dnd.css';
@@ -52,28 +56,32 @@ function FlowSheet()  {
   };
 
   return (
-    <div >
-      <Sidebar />
+    <Grid.Column width={12} >
+      <Grid>
+        <Grid.Column width={9} >
+        <ReactFlowProvider>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              onInit={setReactFlowInstance}
+              onDrop={onDrop}
+              onDragOver={onDragOver}
+              fitView
+            >
+              <Controls />
+            </ReactFlow>
+        </ReactFlowProvider>
+        </Grid.Column>
+        
+        <Grid.Column width={3}>
+            <Sidebar />
+        </Grid.Column>
 
-      <div style={{ height: 400 }} >
-      <ReactFlowProvider>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            onInit={setReactFlowInstance}
-            onDrop={onDrop}
-            onDragOver={onDragOver}
-            fitView
-          >
-            <Controls />
-          </ReactFlow>
-      </ReactFlowProvider>
-      </div>
-
-     </div> 
+      </Grid>
+    </Grid.Column>
   );
 };
 

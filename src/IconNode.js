@@ -2,6 +2,28 @@ import { useCallback } from 'react';
 import { Handle, Position } from 'react-flow-renderer';
 import {Image} from 'semantic-ui-react';
 
+import React from 'react'
+import { Button, Modal } from 'semantic-ui-react'
+import { Chart } from "react-google-charts";
+
+export const data = [
+  ["Year", "Sales", "Expenses"],
+  ["2004", 1000, 400],
+  ["2005", 1170, 460],
+  ["2006", 660, 1120],
+  ["2007", 1030, 540],
+];
+
+export const options = {
+  title: "Company Performance",
+  curveType: "function",
+  legend: { position: "bottom" },
+};
+
+
+ 
+  
+
 const handleStyle = { left: 10 };
 
 function IconNode({ data }) {
@@ -40,7 +62,15 @@ function IconNode({ data }) {
   }
   return (
     <div className="icon-node">
-        {icon}
+        
+        <Modal
+            trigger={icon}
+            header='Data Details'
+            content='Data details here'
+            actions={['Close', { key: 'done', content: 'Done', positive: true }]}
+        >
+          
+        </Modal>
     </div> )
 
 }

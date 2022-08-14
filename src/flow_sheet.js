@@ -34,7 +34,7 @@ const initialNodes = [
 ];
 
 const initialEdges = [
-   { id: 'e1-2', source: '1', target: '2',  animated: true, markerEnd: { type: MarkerType.ArrowClosed}, stroke: 'black'  },
+   { id: 'e1-1', source: '1', target: '2',  animated: true, markerEnd: { type: MarkerType.ArrowClosed}, stroke: 'black'  },
    { id: 'e1-2', source: '2', target: '3',  animated: true, markerEnd: {
     type: MarkerType.ArrowClosed,
   }}   

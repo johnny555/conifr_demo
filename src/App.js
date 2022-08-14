@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import FlowSheet from './flow_sheet.js';
+import { Grid, Button, Menu } from 'semantic-ui-react';
+import { useState, DragEvent, useRef, getState, setState } from 'react';
+
 
 function App() {
+
+  // Note that the FLow needs to be provdiing a Grid with width summing to 12
+
+  const [activeItem, setActiveItem] = useState('flow');  
+
+  const handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid>
+      <Grid.Column width={3} >
+        <Menu fluid vertical tabular>
+              <Menu.Item
+                name='flow'
+                active={activeItem === 'flow'}
+                onClick={() => {setActiveItem('flow');}}
+              />
+              <Menu.Item
+                name='Flow Report'
+                active={activeItem === 'Flow Report'}
+                onClick={() => {setActiveItem('Flow Report');}}
+              />
+              <Menu.Item
+                name='Sustainability Report'
+                active={activeItem === 'Sustainability Report'}
+                onClick={() => {setActiveItem('Sustainability Report');}}
+              />
+        <div style={{ height: 500 }} />
+        </Menu>
+      </Grid.Column>
+      
+
+      <FlowSheet />
+      
+    </Grid>
   );
 }
 

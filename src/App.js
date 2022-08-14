@@ -1,42 +1,61 @@
 import './App.css';
 import FlowSheet from './flow_sheet.js';
-import { Grid, Button, Menu } from 'semantic-ui-react';
+import { Grid, Button, Menu, Header } from 'semantic-ui-react';
 import { useState, DragEvent, useRef, getState, setState } from 'react';
-
+import Featured from './Components/featured/Featured';
+import Chart from './Components/chart/Chart';
+import Table from './Components/table/Table';
 
 function App() {
 
   // Note that the FLow needs to be provdiing a Grid with width summing to 12
 
-  const [activeItem, setActiveItem] = useState('flow');  
+  const [activeItem, setActiveItem] = useState('Flow');  
 
   const handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  var body = '';
+  if (activeItem == 'Flow') 
+  {
+    body = (<FlowSheet/>);
+  }
+  else {
+    body = (<Grid.Column width={12}>
+      <Grid>
+        <Grid.Row>
+       
+          <Featured/>
+       </Grid.Row>
+       <Grid.Row> 
+          <Chart />
+        </Grid.Row>
+        <Grid.Row>
+          <Table />
+        </Grid.Row>
+      </Grid>
+    </Grid.Column>)
+  }
+  
   return (
-    <Grid>
+    <Grid style={{background: '#e1d4c9'}}>
       <Grid.Column width={3} >
         <Menu fluid vertical tabular>
               <Menu.Item
-                name='flow'
-                active={activeItem === 'flow'}
-                onClick={() => {setActiveItem('flow');}}
+                name='Flow'
+                active={activeItem === 'Flow'}
+                onClick={() => {setActiveItem('Flow');}}
               />
               <Menu.Item
                 name='Flow Report'
                 active={activeItem === 'Flow Report'}
                 onClick={() => {setActiveItem('Flow Report');}}
               />
-              <Menu.Item
-                name='Sustainability Report'
-                active={activeItem === 'Sustainability Report'}
-                onClick={() => {setActiveItem('Sustainability Report');}}
-              />
+           
         <div style={{ height: 500 }} />
         </Menu>
       </Grid.Column>
       
-
-      <FlowSheet />
+      { body }
       
     </Grid>
   );

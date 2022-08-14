@@ -22,18 +22,22 @@ function App() {
   else {
     body = (<Grid.Column width={12}>
       <Grid>
-        
+        <Grid.Row>
+       
           <Featured/>
-        
+       </Grid.Row>
+       <Grid.Row> 
           <Chart />
-        
-        <Table />
+        </Grid.Row>
+        <Grid.Row>
+          <Table />
+        </Grid.Row>
       </Grid>
     </Grid.Column>)
   }
   
   return (
-    <Grid>
+    <Grid style={{background: '#e1d4c9'}}>
       <Grid.Column width={3} >
         <Menu fluid vertical tabular>
               <Menu.Item

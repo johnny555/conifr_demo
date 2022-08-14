@@ -4,8 +4,7 @@ import {
   Area,
   XAxis,
   CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
+  Tooltip
 } from "recharts";
 
 const data = [
@@ -19,8 +18,6 @@ const data = [
 
 const Chart = ({ aspect, title }) => {
   return (
-    <div className="chart">
-      <div className="title">{title}</div>
         <AreaChart
           width={730}
           height={250}
@@ -44,7 +41,6 @@ const Chart = ({ aspect, title }) => {
             fill="url(#total)"
           />
         </AreaChart>
-    </div>
   );
 };
 

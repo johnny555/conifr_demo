@@ -3,8 +3,8 @@ import { Handle, Position } from 'react-flow-renderer';
 import {Image} from 'semantic-ui-react';
 
 import React from 'react'
-import { Button, Modal } from 'semantic-ui-react'
-import { Chart } from "react-google-charts";
+import { Button, Header, Modal } from 'semantic-ui-react'
+import Chart from './Components/chart/Chart';
 
 export const data = [
   ["Year", "Sales", "Expenses"],
@@ -65,11 +65,9 @@ function IconNode({ data }) {
         
         <Modal
             trigger={icon}
-            header='Data Details'
-            content='Data details here'
-            actions={['Close', { key: 'done', content: 'Done', positive: true }]}
         >
-          
+            <Header> Data Feeds</Header>
+            <Chart />
         </Modal>
     </div> )
 

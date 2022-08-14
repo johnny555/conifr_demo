@@ -1,0 +1,13 @@
+.icon-node {
+    border: 2px solid #0000;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+  }
+  
+  .icon-node label {
+    display: block;
+    color: #777;
+    font-size: 12px;
+  }
+  

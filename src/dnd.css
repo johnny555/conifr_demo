@@ -1,3 +1,7 @@
+body {
+  background: '#bec29e';
+}
+
 .dndflow {
     flex-direction: column;
     display: flex;
@@ -14,6 +18,10 @@
     background: #fcfcfc;
   }
   
+  path.react-flow__edge-path {
+    stroke-width: 4;
+    stroke: black;
+  }
   .dndflow aside > * {
     margin-bottom: 10px;
     cursor: grab;

@@ -12,6 +12,7 @@ function App() {
 
   const handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  
   return (
     <Grid>
       <Grid.Column width={3} >
@@ -26,11 +27,7 @@ function App() {
                 active={activeItem === 'Flow Report'}
                 onClick={() => {setActiveItem('Flow Report');}}
               />
-              <Menu.Item
-                name='Sustainability Report'
-                active={activeItem === 'Sustainability Report'}
-                onClick={() => {setActiveItem('Sustainability Report');}}
-              />
+           
         <div style={{ height: 500 }} />
         </Menu>
       </Grid.Column>
